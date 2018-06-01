@@ -25,6 +25,7 @@ ENV FASTER_RCNN_ROOT /py-faster-rcnn
 RUN apt-get update && apt-get install -y \
     build-essential \
     git \
+    wget \
     libopencv-dev \
     python-opencv \
     python-dev \
@@ -73,6 +74,12 @@ RUN cd caffe-fast-rcnn && \
     cat Makefile.config && \
     make -j$(nproc) && \
     make -j$(nproc) pycaffe
+
+# download/extract model for sandwich
+WORKDIR /gabriel-sandwich/model
+RUN wget https://owncloud.cmusatyalab.org/owncloud/index.php/s/hC6Azp6hEw1e2u1/download -O sandwich_model.tar.gz
+RUN tar -xvzf sandwich_model.tar.gz
+
 
 EXPOSE 7070 9098 9111
 CMD ["bash", "-c", "gabriel-control -n eth0 -l & sleep 5; gabriel-ucomm -s 127.0.0.1:8021 & sleep 5; cd /gabriel-sandwich && python proxy.py -s 127.0.0.1:8021"]
