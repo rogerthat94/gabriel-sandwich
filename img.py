@@ -33,7 +33,6 @@ import cv2
 import sys
 import time
 
-sys.path.insert(0, "..")
 import config
 import cooking_cv as cc
 import zhuocv as zc
@@ -48,21 +47,23 @@ def parse_arguments():
 
 # set configs...
 config.setup(is_streaming = False)
-display_list = config.DISPLAY_LIST
 
 # load test image
 input_file = parse_arguments()
 img = cv2.imread(input_file)
+resize_ratio = 1
 if max(img.shape) > config.IMAGE_MAX_WH:
     resize_ratio = float(config.IMAGE_MAX_WH) / max(img.shape[0], img.shape[1])
     img = cv2.resize(img, (0, 0), fx = resize_ratio, fy = resize_ratio, interpolation = cv2.INTER_AREA)
 
-zc.check_and_display("input", img, display_list, resize_max = config.DISPLAY_MAX_PIXEL, wait_time = config.DISPLAY_WAIT_TIME)
+# zc.check_and_display("input", img, display_list, resize_max = config.DISPLAY_MAX_PIXEL, wait_time =
+# config.DISPLAY_WAIT_TIME)
 
 # process image and get the symbolic representation
-rtn_msg, state = cc.process(img, display_list)
-print rtn_msg
-print state
+rtn_msg, state = cc.process(img, resize_ratio=resize_ratio, display_list=[])
+# the object detection result format is, for each line: [x1, y1, x2, y2, confidence, cls_idx]
+# cls_idx corresponds to config.LABELS
+print "Detection status: {}; detection results: {}".format(rtn_msg, state)
 
 try:
     while True:
