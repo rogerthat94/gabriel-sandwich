@@ -56,9 +56,6 @@ if max(img.shape) > config.IMAGE_MAX_WH:
     resize_ratio = float(config.IMAGE_MAX_WH) / max(img.shape[0], img.shape[1])
     img = cv2.resize(img, (0, 0), fx = resize_ratio, fy = resize_ratio, interpolation = cv2.INTER_AREA)
 
-# zc.check_and_display("input", img, display_list, resize_max = config.DISPLAY_MAX_PIXEL, wait_time =
-# config.DISPLAY_WAIT_TIME)
-
 # process image and get the symbolic representation
 rtn_msg, state = cc.process(img, resize_ratio=resize_ratio, display_list=[])
 # the object detection result format is, for each line: [x1, y1, x2, y2, confidence, cls_idx]
