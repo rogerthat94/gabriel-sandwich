@@ -1,11 +1,11 @@
 # Overview [![Docker Image Status][docker-image]][docker] [![License][license-image]][license]
 
-Cognitive Assistance for making a sandwich. Below is the demo video.
+Cognitive Assistance for making a sandwich. Click below for the demo video.
 
 [![Demo Video](https://img.youtube.com/vi/USakPP45WvM/0.jpg)](https://www.youtube.com/watch?v=USakPP45WvM)
 
-[docker-image]: https://img.shields.io/docker/build/jamesjue/gabriel-sandwich.svg
-[docker]: https://hub.docker.com/r/jamesjue/gabriel-sandwich
+[docker-image]: https://img.shields.io/docker/build/cmusatyalab/gabriel-sandwich.svg
+[docker]: https://hub.docker.com/r/cmusatyalab/gabriel-sandwich
 
 [license-image]: http://img.shields.io/badge/license-Apache--2-blue.svg?style=flat
 [license]: LICENSE
