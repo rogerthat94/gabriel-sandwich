@@ -24,5 +24,5 @@ Make sure to change IP address of GABRIEL_IP variable at src/edu/cmu/cs/gabriel/
 nvidia-docker run --rm -it --name sandwich \
 -p 0.0.0.0:9098:9098 -p 0.0.0.0:9111:9111 -p 0.0.0.0:22222:22222 \
 -p 0.0.0.0:8080:8080 \
-jamesjue/gabriel-sandwich:latest
+cmusatyalab/gabriel-sandwich:latest
 ```
