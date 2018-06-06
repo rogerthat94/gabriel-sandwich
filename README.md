@@ -26,3 +26,6 @@ nvidia-docker run --rm -it --name sandwich \
 -p 0.0.0.0:8080:8080 \
 cmusatyalab/gabriel-sandwich:latest
 ```
+
+# Test the trained DNN Object Detector Only
+Please see [img.py](img.py). The model can be downloaded from [here](https://owncloud.cmusatyalab.org/owncloud/index.php/s/hC6Azp6hEw1e2u1/download)
