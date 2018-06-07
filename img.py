@@ -62,8 +62,3 @@ rtn_msg, state = cc.process(img, resize_ratio=resize_ratio, display_list=[])
 # cls_idx corresponds to config.LABELS
 print "Detection status: {}; detection results: {}".format(rtn_msg, state)
 
-try:
-    while True:
-        time.sleep(1)
-except KeyboardInterrupt as e:
-    sys.stdout.write("user exits\n")
