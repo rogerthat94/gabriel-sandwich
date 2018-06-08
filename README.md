@@ -1,6 +1,6 @@
 # Overview [![Docker Image Status][docker-image]][docker] [![License][license-image]][license]
 
-Cognitive Assistance for making a sandwich. Click below for the demo video.
+Cognitive Assistance for making a sandwich. Click below for the demo video. This cognitive assistance is designed for this [Sandwich kit](https://www.amazon.com/Small-World-Toys-Living-Sandwich/dp/B00004W156)
 
 [![Demo Video](https://img.youtube.com/vi/USakPP45WvM/0.jpg)](https://www.youtube.com/watch?v=USakPP45WvM)
 
