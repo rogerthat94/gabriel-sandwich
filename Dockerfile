@@ -33,19 +33,19 @@ RUN cd /usr/lib/x86_64-linux-gnu && ln -s libhdf5_serial.so libhdf5.so && \
 
 RUN python3 -m pip install --upgrade pip
 
-COPY . /gabriel-ikea
+COPY . /gabriel-sandwich
 
-WORKDIR /gabriel-ikea
+WORKDIR /gabriel-sandwich
 RUN python3 -m pip install -r requirements.txt
 
-ENV FASTER_RCNN_ROOT /gabriel-ikea/py-faster-rcnn
+ENV FASTER_RCNN_ROOT /gabriel-sandwich/py-faster-rcnn
 
 # install python dependencies
-WORKDIR /gabriel-ikea/py-faster-rcnn/caffe-fast-rcnn/python
+WORKDIR /gabriel-sandwich/py-faster-rcnn/caffe-fast-rcnn/python
 RUN python3 -m pip install -r requirements.txt
 
 # compile py-faster-rcnn
-WORKDIR /gabriel-ikea/py-faster-rcnn
+WORKDIR /gabriel-sandwich/py-faster-rcnn
 RUN cd lib && \
     make -j$(nproc)
 RUN cd caffe-fast-rcnn && \
@@ -58,5 +58,5 @@ RUN wget https://owncloud.cmusatyalab.org/owncloud/index.php/s/hC6Azp6hEw1e2u1/d
 RUN tar -xvzf sandwich_model.tar.gz
 
 EXPOSE 9099
-WORKDIR /gabriel-ikea
+WORKDIR /gabriel-sandwich
 ENTRYPOINT ["./main.py"]
