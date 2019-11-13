@@ -93,7 +93,7 @@ def _ham_result(object_counts, engine_fields):
     elif object_counts[2] > 0:
         engine_fields.sandwich.state = instruction_pb2.Sandwich.State.CUCUMBER
         return _result_with_update(
-            "images_feedback/lettuce.jpeg", "This sandwich doesn't contain ",
+            "images_feedback/lettuce.jpeg", "This sandwich doesn't contain "
             "any cucumber. Replace the cucumber with lettuce.", engine_fields)
     elif object_counts[1] == 0:
         return _nothing_result(object_counts, engine_fields)
@@ -104,7 +104,7 @@ def _ham_result(object_counts, engine_fields):
 def _half_helper(engine_fields):
     engine_fields.sandwich.state = instruction_pb2.Sandwich.State.HALF
     return _result_with_update(
-        "images_feedback/tomato.jpeg", "You are half done. Now put a piece of ",
+        "images_feedback/tomato.jpeg", "You are half done. Now put a piece of "
         "tomato on the bread.", engine_fields)
 
 

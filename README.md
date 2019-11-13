@@ -12,11 +12,7 @@ Cognitive Assistance for making a sandwich. Click below for the demo video. This
 
 # Installation
 ## Client
-An Android client is available on the Google PlayStore 
-
-<a href='https://play.google.com/store/apps/details?id=edu.cmu.cs.gabrielclient'><img height='125px' width='323px' alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
-
-Google Play and the Google Play logo are trademarks of Google LLC.
+An Android client is available on [Google Play](https://play.google.com/store/apps/details?id=edu.cmu.cs.gabrielclient). The source code is available [here](https://github.com/cmusatyalab/gabriel/tree/new-gabriel/android-client).
 
 ## Server
 Running the server application using Docker is advised. If you want to install from source, please see [Dockerfile](Dockerfile) for details.
@@ -24,17 +20,14 @@ Running the server application using Docker is advised. If you want to install f
 
 # How to Run
 ## Client
-From the main activity one can add servers by name and IP/domain. Subtitles for audio feedback can also been toggled. This option is useful for devices that may not have integrated speakers(like ODG R-7).
+From the main activity one can add servers by name and IP/domain. Subtitles for audio feedback can also been toggled. This option is useful for devices that may not have integrated speakers (like ODG R-7).
 Pressing the 'Play' button next to a server will initiate a connection to the Gabriel server at that address.
 
 ## Server
 ### Container
 ```bash
-nvidia-docker run --rm -it --name sandwich \
--p 0.0.0.0:9098:9098 -p 0.0.0.0:9111:9111 -p 0.0.0.0:22222:22222 \
--p 0.0.0.0:8080:8080 \
-cmusatyalab/gabriel-sandwich:latest
+docker run --rm -it --gpus all -p 9099:9099 cmusatyalab/gabriel-sandwich:latest
 ```
 
 # Test the trained DNN Object Detector Only
-Please see [img.py](img.py). The model can be downloaded from [here](https://owncloud.cmusatyalab.org/owncloud/index.php/s/hC6Azp6hEw1e2u1/download).
+Please see [gabriel-ikea/test.py](https://github.com/cmusatyalab/gabriel-ikea/blob/new-gabriel/test.py). The model can be downloaded from [here](https://owncloud.cmusatyalab.org/owncloud/index.php/s/hC6Azp6hEw1e2u1/download).
