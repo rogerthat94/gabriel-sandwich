@@ -4,6 +4,8 @@ Cognitive Assistance for making a sandwich. Click below for the demo video. This
 
 [![Demo Video](https://img.youtube.com/vi/USakPP45WvM/0.jpg)](https://www.youtube.com/watch?v=USakPP45WvM)
 
+[States and transitions](https://docs.google.com/drawings/d/15wmevFqD2FE_dqVGJI0EU3L5igNC6SEnNhNdw40KNkI)
+
 [docker-image]: https://img.shields.io/docker/build/cmusatyalab/gabriel-sandwich.svg
 [docker]: https://hub.docker.com/r/cmusatyalab/gabriel-sandwich
 
