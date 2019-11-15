@@ -48,9 +48,9 @@ def _update_holo_location(objects, holo, engine_fields):
     area = (y2 - y1) * (x2 - x1)
 
     depth = math.sqrt(holo.dist / float(area))
-    engine_fields.holo_x = x
-    engine_fields.holo_y = y
-    engine_fields.depth = depth
+    engine_fields.sandwich.holo_x = x
+    engine_fields.sandwich.holo_y = y
+    engine_fields.sandwich.holo_depth = depth
 
 
 def _result_with_update(
@@ -130,7 +130,7 @@ def _ham_result(objects, object_counts, engine_fields):
             "images_feedback/lettuce.jpeg", "This sandwich doesn't contain "
             "any cucumber. Replace the cucumber with lettuce.", engine_fields)
     elif object_counts[0] > 0 and object_counts[1] == 0:
-        return _nothing_result(object_counts, engine_fields)
+        return _nothing_result(objects, object_counts, engine_fields)
 
     if object_counts[1] > 0:
         engine_fields.update_count += 1
@@ -154,7 +154,7 @@ def _lettuce_result(objects, object_counts, engine_fields):
 
     if object_counts[3] > 0:
         _update_holo_location(objects, BREAD_HOLO, engine_fields)
-    return _result_without_update(objects, engine_fields)
+    return _result_without_update(engine_fields)
 
 
 def _cucumber_result(objects, object_counts, engine_fields):
@@ -163,7 +163,7 @@ def _cucumber_result(objects, object_counts, engine_fields):
     elif object_counts[1] > 0 and object_counts[3] == 0:
         return _bread_result(objects, object_counts, engine_fields)
 
-    return _result_without_update(objects, engine_fields)
+    return _result_without_update(engine_fields)
 
 
 def _tomato_helper(objects, engine_fields):
