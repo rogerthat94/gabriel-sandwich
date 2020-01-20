@@ -14,7 +14,7 @@ Cognitive Assistance for making a sandwich. Click below for the demo video. This
 
 # Installation
 ## Client
-An Android client is available on [Google Play](https://play.google.com/store/apps/details?id=edu.cmu.cs.gabrielclient). The source code is available [here](https://github.com/cmusatyalab/gabriel/tree/new-gabriel/android-client).
+An Android client is available on [Google Play](https://play.google.com/store/apps/details?id=edu.cmu.cs.gabrielclient). The source code is available [here](https://github.com/cmusatyalab/gabriel-instruction/tree/master/android-client).
 
 ## Server
 Running the server application using Docker is advised. If you want to install from source, please see [Dockerfile](Dockerfile) for details.
@@ -30,6 +30,3 @@ Pressing the 'Play' button next to a server will initiate a connection to the Ga
 ```bash
 docker run --rm -it --gpus all -p 9099:9099 cmusatyalab/gabriel-sandwich:latest
 ```
-
-# Test the trained DNN Object Detector Only
-Please see [gabriel-ikea/test.py](https://github.com/cmusatyalab/gabriel-ikea/blob/new-gabriel/test.py). The model can be downloaded from [here](https://owncloud.cmusatyalab.org/owncloud/index.php/s/hC6Azp6hEw1e2u1/download).
