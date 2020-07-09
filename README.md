@@ -1,10 +1,10 @@
-# Overview [![Docker Image Status][docker-image]][docker]
-[![License][license-image]][license]
+# Overview [![Docker Image Status][docker-image]][docker] [![License][license-image]][license]
 
-Cognitive assistant for making a sandwich. Watch a demo video
-[here](https://www.youtube.com/watch?v=USakPP45WvM). This assistant requires
+Cognitive assistant for making a sandwich out of parts from
 [this](https://web.archive.org/web/20160122145218/https://www.amazon.com/Small-World-Toys-Living-Sandwich/dp/B00004W156)
-sandwich kit. If you do not have this kit, you can test the assistant using
+kit. Watch a demo video
+[here](https://www.youtube.com/watch?v=USakPP45WvM). If you do not have the toy
+sandwich kit, you can test the assistant using
 [these](https://docs.google.com/document/d/e/2PACX-1vRgMkNs4dGd5dsyR4_BadXYY9UKfLz3W8Ah11sfkauuHSW10tWMpZo7vm0HEMwSJV-LBXGp7ICIU5E4/pub)
 images. See
 [here](https://docs.google.com/drawings/d/15wmevFqD2FE_dqVGJI0EU3L5igNC6SEnNhNdw40KNkI)
