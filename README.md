@@ -1,10 +1,14 @@
-# Overview [![Docker Image Status][docker-image]][docker] [![License][license-image]][license]
+# Overview [![Docker Image Status][docker-image]][docker]
+[![License][license-image]][license]
 
-Cognitive Assistance for making a sandwich. Click below for the demo video. This cognitive assistance is designed for this [Sandwich kit](https://www.amazon.com/Small-World-Toys-Living-Sandwich/dp/B00004W156).
-
-[![Demo Video](https://img.youtube.com/vi/USakPP45WvM/0.jpg)](https://www.youtube.com/watch?v=USakPP45WvM)
-
-[States and transitions](https://docs.google.com/drawings/d/15wmevFqD2FE_dqVGJI0EU3L5igNC6SEnNhNdw40KNkI)
+Cognitive assistant for making a sandwich. Watch a demo video
+[here](https://www.youtube.com/watch?v=USakPP45WvM). This assistant requires
+[this](https://www.amazon.com/Small-World-Toys-Living-Sandwich/dp/B00004W156)
+sandwich kit. If you do not have this kit, you can test the assistant using
+[these](https://docs.google.com/document/d/1iNapuO02i91w4XjVJw91jXNnTRHpqc2H9xvjKm6KOO0)
+images. See
+[here](https://docs.google.com/drawings/d/15wmevFqD2FE_dqVGJI0EU3L5igNC6SEnNhNdw40KNkI)
+for this assistant's states and transitions.
 
 [docker-image]: https://img.shields.io/docker/build/cmusatyalab/gabriel-sandwich.svg
 [docker]: https://hub.docker.com/r/cmusatyalab/gabriel-sandwich
@@ -13,20 +17,32 @@ Cognitive Assistance for making a sandwich. Click below for the demo video. This
 [license]: LICENSE
 
 # Installation
+
 ## Client
-An Android client is available on [Google Play](https://play.google.com/store/apps/details?id=edu.cmu.cs.gabrielclient). The source code is available [here](https://github.com/cmusatyalab/gabriel-instruction/tree/master/android-client).
+
+An Android client is available on
+[Google Play](https://play.google.com/store/apps/details?id=edu.cmu.cs.gabrielclient).
+The source code is available
+[here](https://github.com/cmusatyalab/gabriel-instruction/tree/master/android).
 
 ## Server
-Running the server application using Docker is advised. If you want to install from source, please see [Dockerfile](Dockerfile) for details.
 
+Running the server application using Docker is advised. If you want to run the
+code directly, please see our [Dockerfile](Dockerfile) for details.
 
 # How to Run
+
 ## Client
-From the main activity one can add servers by name and IP/domain. Subtitles for audio feedback can also been toggled. This option is useful for devices that may not have integrated speakers (like ODG R-7).
-Pressing the 'Play' button next to a server will initiate a connection to the Gabriel server at that address.
+
+Add servers by name and IP/domain from the main activity. This activity also
+contains a toggle to show subtitles with instructions. Subtitles are useful for
+devices that may not have integrated speakers (such as the ODG R-7). Connect to
+a server by pressing the button to the left of its name.
 
 ## Server
+
 ### Container
+
 ```bash
 docker run --rm -it --gpus all -p 9099:9099 cmusatyalab/gabriel-sandwich:latest
 ```
