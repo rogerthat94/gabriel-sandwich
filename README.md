@@ -5,7 +5,7 @@ Cognitive assistant for making a sandwich. Watch a demo video
 [here](https://www.youtube.com/watch?v=USakPP45WvM). This assistant requires
 [this](https://www.amazon.com/Small-World-Toys-Living-Sandwich/dp/B00004W156)
 sandwich kit. If you do not have this kit, you can test the assistant using
-[these](https://docs.google.com/document/d/1iNapuO02i91w4XjVJw91jXNnTRHpqc2H9xvjKm6KOO0)
+[these](https://docs.google.com/document/d/e/2PACX-1vRgMkNs4dGd5dsyR4_BadXYY9UKfLz3W8Ah11sfkauuHSW10tWMpZo7vm0HEMwSJV-LBXGp7ICIU5E4/pub)
 images. See
 [here](https://docs.google.com/drawings/d/15wmevFqD2FE_dqVGJI0EU3L5igNC6SEnNhNdw40KNkI)
 for this assistant's states and transitions.
