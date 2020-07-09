@@ -1,4 +1,4 @@
-# Overview [![Docker Image Status][docker-image]][docker] [![License][license-image]][license]
+# Speech Fork
 
 Cognitive assistant for making a sandwich out of parts from
 [this](https://web.archive.org/web/20160122145218/https://www.amazon.com/Small-World-Toys-Living-Sandwich/dp/B00004W156)
